@@ -38,4 +38,4 @@ The deployer receives no implicit governance role. Membership exists only in cou
 
 See [StudioNet verification](verification/studionet-verification.md) for the reproducible inputs, transaction hashes, and final readback.
 
-Frontend: [repo-license-council.pages.dev](https://repo-license-council.pages.dev/). The live page links to the contract Explorer, immutable LICENSE revisions, and the transaction evidence. See [Cloudflare production verification](verification/cloudflare-production.md).
+Frontend: [repo-license-council.pages.dev](https://repo-license-council.pages.dev/). The live page links to the contract Explorer and immutable LICENSE revisions. Transaction evidence remains in [StudioNet verification](verification/studionet-verification.md). See [Cloudflare production verification](verification/cloudflare-production.md).
