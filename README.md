@@ -28,3 +28,12 @@ npm run build
 ```
 
 The deployer receives no implicit governance role. Membership exists only in council configuration. See [architecture](docs/ARCHITECTURE.md), [threat model](docs/THREAT_MODEL.md), and [deployment guide](docs/DEPLOYMENT.md).
+
+## Verified deployment
+
+- StudioNet contract: `0xfEa116bEa66ba7FF6F7Cc4573c949a22f2Fc1665`
+- Chain ID: `61999`
+- Deployed/local source SHA-256: `2f69ef79e77fd4b0d8bd84cec1d96954fd0084559d562014b8d583cc46f3240d`
+- Live result: immutable GitHub provenance verified, semantic assessment recorded, duplicate ballot and premature finalization rejected, quorum finalized deterministically.
+
+See [StudioNet verification](verification/studionet-verification.md) for the reproducible inputs, transaction hashes, and final readback.
