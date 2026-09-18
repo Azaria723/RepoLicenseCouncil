@@ -112,10 +112,10 @@ class RepoLicenseCouncil(gl.Contract):
 
     def _verified_license(self, council: dict, commit: str, expected: str) -> typing.Any:
         api = "https://api.github.com/repos/" + council["repo_owner"] + "/" + council["repo_name"]
-        commit_response = gl.nondet.web.get(api + "/commits/" + commit)
+        commit_response = gl.nondet.web.get(api + "/git/commits/" + commit)
         if commit_response.status != 200 or len(commit_response.body) == 0 or len(commit_response.body) > 18000:
             return None
-        commit_data = json.loads(commit_response.body.decode("utf-8")); tree_sha = str(commit_data.get("commit", {}).get("tree", {}).get("sha", ""))
+        commit_data = json.loads(commit_response.body.decode("utf-8")); tree_sha = str(commit_data.get("tree", {}).get("sha", ""))
         if str(commit_data.get("sha", "")).lower() != commit or not self._hex(tree_sha, 40):
             return None
         tree_response = gl.nondet.web.get(api + "/git/trees/" + tree_sha + "?recursive=1")

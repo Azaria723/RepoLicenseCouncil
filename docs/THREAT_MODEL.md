@@ -4,7 +4,7 @@
 |---|---|
 | Proposer supplies an arbitrary evidence URL | URLs are derived from the council-bound repository, commit and path. |
 | Branch mutates after proposal | Only full 40-character commits are accepted. |
-| Commit is from another repository | Commit API identity is checked under the bound repository route. |
+| Commit is from another repository | Git Data Commit API identity is checked under the bound repository route. |
 | Manifest hides relevant repository state | The canonical Git commit tree is fetched; truncated trees fail closed. |
 | Raw response differs from Git blob | Path, type, mode, size and Git blob SHA-1 are verified. |
 | Submitted digest is unrelated to adjudicated bytes | SHA-256 is recomputed from the exact fetched bytes. |

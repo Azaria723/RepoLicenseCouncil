@@ -21,7 +21,7 @@ def mock(vm,items,bad_blob=False,truncated=False):
     api=f"https://api.github.com/repos/{OWNER}/{REPO}";raw="https://raw.githubusercontent.com/"
     for i,(commit,body) in enumerate(items):
         tree=str(i+4)*40
-        vm.mock_web((api+"/commits/"+commit).replace(".",r"\.")+"$",{"status":200,"body":json.dumps({"sha":commit,"commit":{"tree":{"sha":tree}}}).encode()})
+        vm.mock_web((api+"/git/commits/"+commit).replace(".",r"\.")+"$",{"status":200,"body":json.dumps({"sha":commit,"tree":{"sha":tree}}).encode()})
         entry={"path":PATH[1:],"mode":"100644","type":"blob","size":len(body),"sha":"0"*40 if bad_blob else blob(body)}
         vm.mock_web((api+"/git/trees/"+tree+r"\?recursive=1$").replace(".",r"\."),{"status":200,"body":json.dumps({"truncated":truncated,"tree":[entry]}).encode()})
         vm.mock_web((raw+OWNER+"/"+REPO+"/"+commit+PATH).replace(".",r"\.")+"$",{"status":200,"body":body})
