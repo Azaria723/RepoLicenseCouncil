@@ -1,0 +1,9 @@
+.buttons{flex-wrap:wrap}
+.buttons .secondary-link{display:inline-flex;align-items:center;gap:7px;background:white;color:#4338ca;border:1px solid #d8daf0}
+.buttons .secondary-link svg{width:16px}
+.stat a,.case-evidence a{color:#4338ca;font-weight:700;text-decoration:none}
+.stat a:hover,.case-evidence a:hover{text-decoration:underline}
+.case-evidence{display:flex;align-items:center;gap:14px;flex-wrap:wrap;border-top:1px solid #e5e5ef;margin-top:20px;padding-top:17px;font-size:13px}
+.case-evidence span{font-weight:700;color:#5d657f}
+.case-evidence strong{margin-left:auto;color:#087e69}
+.decision-note{color:#646c85;font-size:14px;line-height:1.5;margin:14px 0 0}

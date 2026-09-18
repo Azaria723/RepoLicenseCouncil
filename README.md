@@ -37,3 +37,5 @@ The deployer receives no implicit governance role. Membership exists only in cou
 - Live result: immutable GitHub provenance verified, semantic assessment recorded, duplicate ballot and premature finalization rejected, quorum finalized deterministically.
 
 See [StudioNet verification](verification/studionet-verification.md) for the reproducible inputs, transaction hashes, and final readback.
+
+Frontend: [repo-license-council.pages.dev](https://repo-license-council.pages.dev/). The live page links to the contract Explorer, immutable LICENSE revisions, and the transaction evidence. See [Cloudflare production verification](verification/cloudflare-production.md).
